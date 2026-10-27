@@ -1,52 +1,76 @@
 import albinPhoto from '../assets/albin-hero.jpg'
 
-function Hero() {
+export default function Hero() {
   return (
-    <section id="start" className="hero">
+    <section id="start" className="hero" aria-labelledby="hero-title">
       <div className="hero-content">
-        <div className="hero-badge">
-          Söker mitt första jobb inom utveckling / AI
-        </div>
-
-        <h1>
-          Hej! Jag heter{' '}
-          <span className="gradient-text">
-            Albin Kalatzis Forsberg
-          </span>{' '}
-          och är{' '}
-          <span className="gradient-text">
-            Junior Software & AI Developer
-          </span>{' '}
-          i Stockholm.
+        <span className="hero-badge">
+          <span className="status-dot" />
+          Öppen för min första roll inom utveckling & AI
+        </span>
+        <h1 id="hero-title">
+          Albin Kalatzis
+          <br />
+          Forsberg.
+          <span className="hero-title-role gradient-text">
+            Junior Software &amp; AI Developer
+          </span>
         </h1>
-
-        <p className="hero-description">
-          Jag är nyexaminerad och söker mitt första jobb inom
-          utveckling eller AI/ML. Jag har byggt praktiska projekt
-          inom maskininlärning, AI och webbutveckling och tycker
-          om att lösa problem och skapa användbara lösningar.
+        <p className="hero-role">
+          Systemutveckling & AI/ML <span>· Stockholm</span>
         </p>
-
+        <p className="hero-description">
+          Nyexaminerad AI-utvecklare med praktiska projekt inom maskininlärning,
+          AI och systemutveckling. Nu söker jag ett team där jag kan bidra, lära
+          mig mer och bygga användbara lösningar.
+        </p>
         <div className="hero-buttons">
           <a href="#projects" className="btn-primary">
-            Se mina projekt
+            Utforska mina projekt <span aria-hidden="true">↗</span>
           </a>
-
           <a href="#contact" className="btn-secondary">
-            Kontakta mig
+            Säg hej <span aria-hidden="true">↗</span>
           </a>
         </div>
+        <div className="hero-footnote">
+          <span>PYTHON</span>
+          <i />
+          <span>AI / ML</span>
+          <i />
+          <span>SYSTEMUTVECKLING</span>
+        </div>
       </div>
-
       <div className="hero-visual">
-        <img
-          src={albinPhoto}
-          alt="Porträttbild på Albin Kalatzis Forsberg"
-          className="hero-photo"
-        />
+        <div className="portrait-frame">
+          <img
+            src={albinPhoto}
+            alt="Albin Kalatzis Forsberg utomhus i Stockholm"
+            className="hero-photo"
+            fetchPriority="high"
+          />
+        </div>
+        <div className="floating-note code-note" aria-hidden="true">
+          <span className="window-dots">● ● ●</span>
+          <code>
+            <em>const</em> developer = {'{'}
+            <br />
+            &nbsp; name: <b>'Albin'</b>,<br />
+            &nbsp; mindset: <b>'keep learning'</b>
+            <br />
+            {'}'}
+          </code>
+        </div>
+        <div className="floating-note location-note">
+          <span className="note-icon">✳</span>
+          <div>
+            <strong>Från idé till fungerande kod.</strong>
+            <small>Ett projekt i taget.</small>
+          </div>
+        </div>
+        <span className="visual-spark" aria-hidden="true">
+          ✳
+        </span>
       </div>
     </section>
   )
 }
-
-export default Hero

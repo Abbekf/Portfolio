@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Miljövariabler och hemligheter
+.env
+.env.*
+
+# Lokala Python-miljöer
+.venv/
+venv/
+
+# Lokal information för ChatGPT Sites
+.openai/

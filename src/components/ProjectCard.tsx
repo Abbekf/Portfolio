@@ -1,43 +1,37 @@
+import type { Project } from '../data/projects'
+import ProjectVisual from './ProjectVisual'
 
-type ProjectCardProps = {
-  title: string
-  description: string
-  technologies: string[]
-  githubUrl?: string
-}
-
-function ProjectCard({
-  title,
-  description,
-  technologies,
-  githubUrl
-}: ProjectCardProps) {
+type Props = { project: Project; onSelect: (project: Project) => void }
+export default function ProjectCard({ project, onSelect }: Props) {
   return (
     <article className="project-card">
-      <div className="project-image">
-        <span>{title}</span>
+      <ProjectVisual id={project.id} />
+      <div className="project-body">
+        <span className="project-label">{project.label}</span>
+        <h3>{project.title}</h3>
+        <p>{project.description}</p>
+        <div className="project-tags">
+          {project.technologies.map((tech) => (
+            <span key={tech}>{tech}</span>
+          ))}
+        </div>
+        <div className="project-actions">
+          <button onClick={() => onSelect(project)}>
+            {project.videoUrl ? 'Se video & projekt' : 'Läs om projektet'}{' '}
+            <span aria-hidden="true">↗</span>
+          </button>
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} på GitHub`}
+            >
+              GitHub ↗
+            </a>
+          )}
+        </div>
       </div>
-
-      <h3>{title}</h3>
-      <p>{description}</p>
-
-      <div className="project-tags">
-        {technologies.map((tech) => (
-          <span key={tech}>{tech}</span>
-        ))}
-      </div>
-
-      {githubUrl && (
-        <a
-          href={githubUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visa på GitHub →
-        </a>
-      )}
     </article>
   )
 }
-
-export default ProjectCard
