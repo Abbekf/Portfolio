@@ -50,13 +50,16 @@ export default function ProjectVisual({ id }: Props) {
         </>
       )}
       {id === 'cardiac' && (
-        <>
-          <div className="lung left-lung" />
-          <div className="lung right-lung" />
-          <div className="heart-region" />
-          <div className="scan-line" />
-          <span className="visual-caption">SEGMENT → GENERATE</span>
-        </>
+        <img
+          src="/projects/cardiac/cardiac-inpainting.png"
+          alt=""
+          loading="lazy"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'contain',
+          }}
+        />
       )}
       {id === 'agents' && (
         <>

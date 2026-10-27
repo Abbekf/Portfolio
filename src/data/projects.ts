@@ -68,6 +68,7 @@ export const projects: Project[] = [
   {
     id: 'cardiac',
     title: 'Cardiac Inpainting',
+    githubUrl: 'https://github.com/Abbekf/cardiac-inpainting',
     category: 'LIA-projekt',
     label: 'Nightingale Heart',
     description:
@@ -78,7 +79,7 @@ export const projects: Project[] = [
     approach:
       'Under min LIA på Nightingale Heart arbetade jag med en pipeline för NIH-bilder. Segmentering av hjärta och lungor följdes av inpainting och generering av kontrafaktiska hjärtregioner. SSIM användes för att kontrollera att omgivande bildinnehåll bevarades.',
     takeaway:
-      'Jag fick praktisk erfarenhet av medicinsk bildbehandling, segmenteringsmasker och generativa modeller. Projektet genomfördes under LIA och har inget offentligt kodrepo här.',
+  'Jag fick praktisk erfarenhet av medicinsk bildbehandling, segmenteringsmasker och generativa modeller. Projektet genomfördes under min LIA på Nightingale Heart. Originalbild från NIH Clinical Center, NIH Chest X-ray Dataset. Källa: Wang m.fl., ChestX-ray8, CVPR 2017.',
   },
   {
     id: 'agents',
