@@ -101,6 +101,7 @@ export const projects: Project[] = [
   {
     id: 'accessibility',
     title: 'Accessibility Audit',
+    titleKey: 'projectContent.accessibility.title',
     category: 'internship',
     label: 'projectContent.accessibility.label',
     description:

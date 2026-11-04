@@ -101,6 +101,7 @@
       "takeaway": "I worked across the full workflow, from unstructured web data to useful summaries. The project gave me experience with agent workflows and automation in a real-world setting."
     },
     "accessibility": {
+      "title": "Accessibility Audit",
       "label": "DeLorean",
       "description": "Automated accessibility auditing with rule checks and AI-assisted explanations.",
       "problem": "Accessibility issues need to be both identified and explained so developers can understand what to fix.",

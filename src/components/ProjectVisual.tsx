@@ -30,24 +30,16 @@ export default function ProjectVisual({ id }: Props) {
         />
       )}
       {id === 'melanoma' && (
-        <>
-          <div className="scan-grid" />
-          <div className="scan-target">
-            <div />
-            <i />
-            <i />
-            <i />
-            <i />
-          </div>
-          <span className="scan-label">{t('visual.image')}</span>
-          <div className="scan-progress">
-            <span />
-            <span />
-            <span />
-            <span />
-            <span />
-          </div>
-        </>
+        <img
+          src="/projects/melanoma-classifier/melanoma-classifier.png"
+          alt=""
+          loading="lazy"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
       )}
       {id === 'cardiac' && (
         <img
@@ -74,23 +66,16 @@ export default function ProjectVisual({ id }: Props) {
         />
       )}
       {id === 'accessibility' && (
-        <>
-          <div className="audit-sheet">
-            <span />
-            <span />
-            <span />
-            <div>
-              ✓ <i />
-            </div>
-            <div>
-              ✓ <i />
-            </div>
-            <div>
-              ✓ <i />
-            </div>
-          </div>
-          <div className="access-person">♿</div>
-        </>
+        <img
+          src="/projects/accessibility/accessibility.png"
+          alt=""
+          loading="lazy"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
       )}
     </div>
   )

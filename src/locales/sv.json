@@ -101,6 +101,7 @@
       "takeaway": "Jag arbetade med hela kedjan från ostrukturerad webbdata till användbar sammanställning. Projektet gav erfarenhet av agentflöden och automatisering i ett verkligt sammanhang."
     },
     "accessibility": {
+      "title": "Tillgänglighetsanalys",
       "label": "DeLorean",
       "description": "Automatiserad tillgänglighetsgranskning med regelkontroller och AI-stödda förklaringar.",
       "problem": "Tillgänglighetsfel behöver både hittas och förklaras så att utvecklare kan förstå vad de ska åtgärda.",
