@@ -7,7 +7,6 @@ import ProjectVisual from './ProjectVisual'
 
 export default function Projects() {
   const { t } = useTranslation()
-  const [filter, setFilter] = useState('all')
   const [selected, setSelected] = useState<Project | null>(null)
   const dialog = useRef<HTMLDialogElement>(null)
   function openProject(project: Project) {
@@ -33,28 +32,10 @@ export default function Projects() {
           {t('projects.introDetail')}
         </p>
       </div>
-      <div className="project-filters" aria-label={t('projects.filter')}>
-        {['all', 'personal', 'internship'].map((item) => (
-          <button
-            key={item}
-            aria-pressed={filter === item}
-            onClick={() => setFilter(item)}
-          >
-            {t(`categories.${item}`)}
-            <span>
-              {item === 'all'
-                ? projects.length
-                : projects.filter((p) => p.category === item).length}
-            </span>
-          </button>
-        ))}
-      </div>
       <div className="project-grid">
-        {projects
-          .filter((p) => filter === 'all' || p.category === filter)
-          .map((p) => (
-            <ProjectCard key={p.id} project={p} onSelect={openProject} />
-          ))}
+        {projects.map((p) => (
+          <ProjectCard key={p.id} project={p} onSelect={openProject} />
+        ))}
       </div>
       <dialog
         ref={dialog}

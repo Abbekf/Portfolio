@@ -7,9 +7,9 @@ const storageKey = 'portfolio-language'
 
 function savedLanguage(): 'sv' | 'en' {
   try {
-    return localStorage.getItem(storageKey) === 'en' ? 'en' : 'sv'
+    return localStorage.getItem(storageKey) === 'sv' ? 'sv' : 'en'
   } catch {
-    return 'sv'
+    return 'en'
   }
 }
 
@@ -34,7 +34,7 @@ function syncLanguage(language: string) {
 void i18n.use(initReactI18next).init({
   resources: { sv: { translation: sv }, en: { translation: en } },
   lng: savedLanguage(),
-  fallbackLng: 'sv',
+  fallbackLng: 'en',
   supportedLngs: ['sv', 'en'],
   initAsync: false,
   interpolation: { escapeValue: false },
