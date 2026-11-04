@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 type Theme = 'light' | 'dark'
@@ -15,21 +15,8 @@ export default function ThemeToggle() {
     document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light',
   )
 
-  useEffect(() => {
-    const system = window.matchMedia('(prefers-color-scheme: dark)')
-    function followSystem() {
-      if (document.documentElement.dataset.themePreference === 'explicit') return
-      const next = system.matches ? 'dark' : 'light'
-      applyTheme(next)
-      setTheme(next)
-    }
-    system.addEventListener('change', followSystem)
-    return () => system.removeEventListener('change', followSystem)
-  }, [])
-
   function toggleTheme() {
     const next = theme === 'dark' ? 'light' : 'dark'
-    document.documentElement.dataset.themePreference = 'explicit'
     applyTheme(next)
     setTheme(next)
     try {
