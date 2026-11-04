@@ -25,7 +25,7 @@ export const projects: Project[] = [
       'projectContent.trafficvision.description',
     technologies: ['Python', 'YOLO11', 'ByteTrack', 'Streamlit'],
     videoUrl: '/projects/trafficvision/demo.mp4',
-    posterUrl: '/projects/trafficvision/preview.jpg',
+    posterUrl: '/projects/trafficvision/trafficvision-portfolio.png',
     githubUrl: 'https://github.com/Abbekf/TrafficVision',
     problem:
       'projectContent.trafficvision.problem',
@@ -102,6 +102,7 @@ export const projects: Project[] = [
     id: 'accessibility',
     title: 'Accessibility Audit',
     titleKey: 'projectContent.accessibility.title',
+    githubUrl: 'https://github.com/Abbekf/Accessibility-audit',
     category: 'internship',
     label: 'projectContent.accessibility.label',
     description:

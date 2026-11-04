@@ -10,7 +10,7 @@ export default function ProjectVisual({ id }: Props) {
         <>
           <img
             className="traffic-thumbnail"
-            src="/projects/trafficvision/preview.jpg"
+            src="/projects/trafficvision/trafficvision-portfolio.png"
             alt=""
             loading="lazy"
           />
@@ -43,7 +43,7 @@ export default function ProjectVisual({ id }: Props) {
       )}
       {id === 'cardiac' && (
         <img
-          src="/projects/cardiac/cardiac-inpainting.png"
+          src="/projects/cardiac/cardiac-inpainting-portfolio.png"
           alt=""
           loading="lazy"
           style={{
