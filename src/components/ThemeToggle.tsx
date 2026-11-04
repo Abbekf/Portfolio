@@ -12,18 +12,13 @@ function applyTheme(theme: Theme) {
 export default function ThemeToggle() {
   const { t } = useTranslation()
   const [theme, setTheme] = useState<Theme>(() =>
-    document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light',
+    document.documentElement.dataset.theme === 'light' ? 'light' : 'dark',
   )
 
   function toggleTheme() {
     const next = theme === 'dark' ? 'light' : 'dark'
     applyTheme(next)
     setTheme(next)
-    try {
-      localStorage.setItem('portfolio-theme', next)
-    } catch {
-      // The choice still applies for this visit if storage is blocked.
-    }
   }
 
   const label = t(theme === 'dark' ? 'theme.light' : 'theme.dark')
