@@ -5,12 +5,13 @@ import ProjectVisual from './ProjectVisual'
 type Props = { project: Project; onSelect: (project: Project) => void }
 export default function ProjectCard({ project, onSelect }: Props) {
   const { t } = useTranslation()
+  const title = project.titleKey ? t(project.titleKey) : project.title
   return (
     <article className="project-card">
       <ProjectVisual id={project.id} />
       <div className="project-body">
         <span className="project-label">{t(project.label)}</span>
-        <h3>{project.title}</h3>
+        <h3>{title}</h3>
         <p>{t(project.description)}</p>
         <div className="project-tags">
           {project.technologies.map((tech) => (
@@ -27,7 +28,7 @@ export default function ProjectCard({ project, onSelect }: Props) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={t('projects.githubLabel', { title: project.title })}
+              aria-label={t('projects.githubLabel', { title })}
             >
               GitHub ↗
             </a>

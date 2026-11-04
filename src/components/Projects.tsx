@@ -106,7 +106,7 @@ export default function Projects() {
               <span className="eyebrow">
                 {t(`category.${selected.category}`)} / {t(selected.label)}
               </span>
-              <h2 id="dialog-title">{selected.title}</h2>
+              <h2 id="dialog-title">{selected.titleKey ? t(selected.titleKey) : selected.title}</h2>
               <div className="project-tags">
                 {selected.technologies.map((t) => (
                   <span key={t}>{t}</span>

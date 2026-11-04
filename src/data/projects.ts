@@ -1,6 +1,7 @@
 export type Project = {
   id: string
   title: string
+  titleKey?: string
   category: 'personal' | 'internship'
   label: string
   description: string
@@ -84,6 +85,7 @@ export const projects: Project[] = [
   {
     id: 'agents',
     title: 'Konkurrentanalys med AI',
+    titleKey: 'projectContent.agents.title',
     category: 'internship',
     label: 'projectContent.agents.label',
     description:

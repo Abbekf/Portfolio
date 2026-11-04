@@ -62,31 +62,16 @@ export default function ProjectVisual({ id }: Props) {
         />
       )}
       {id === 'agents' && (
-        <>
-          <div className="mini-dashboard">
-            <div className="mini-header">
-              <span />
-              <span />
-              <span />
-            </div>
-            <div className="dashboard-body">
-              <div className="mini-sidebar" />
-              <div className="mini-content">
-                <div className="mini-metrics">
-                  <i />
-                  <i />
-                  <i />
-                </div>
-                <div className="mini-chart">
-                  {[35, 55, 42, 70, 58, 85, 75].map((v, i) => (
-                    <i key={i} style={{ height: `${v}%` }} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-          <span className="agent-bubble">✧</span>
-        </>
+        <img
+          src="/projects/competitor/competitor.png"
+          alt=""
+          loading="lazy"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
       )}
       {id === 'accessibility' && (
         <>

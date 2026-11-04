@@ -93,6 +93,7 @@
       "takeaway": "I gained hands-on experience with medical imaging, segmentation masks and generative models. The project was carried out during my work placement at Nightingale Heart. Original image from the NIH Clinical Center, NIH Chest X-ray Dataset. Source: Wang et al., ChestX-ray8, CVPR 2017."
     },
     "agents": {
+      "title": "competitor-analysis",
       "label": "DeLorean",
       "description": "From web data to recurring competitor monitoring with LLM-based analysis.",
       "problem": "Manually monitoring competitors’ websites takes time and makes it easy to miss changes.",
@@ -188,5 +189,9 @@
       "area": "Containers",
       "detail": "Basic work with containers and Docker Compose. Among other things, I have set up a local Spark cluster."
     }
+  },
+  "theme": {
+    "light": "Switch to light mode",
+    "dark": "Switch to dark mode"
   }
 }
