@@ -1,7 +1,9 @@
+import { useTranslation } from 'react-i18next'
 type Props = { id: string }
 
-// TrafficVision visar en bild från en riktig körning; övriga motiv är illustrationer.
+// Projektbilder och illustrationer delar samma ram i kort och projektdialog.
 export default function ProjectVisual({ id }: Props) {
+  const { t } = useTranslation()
   return (
     <div className={`project-visual visual-${id}`} aria-hidden="true">
       {id === 'trafficvision' && (
@@ -12,22 +14,20 @@ export default function ProjectVisual({ id }: Props) {
             alt=""
             loading="lazy"
           />
-          <span className="traffic-video-label">▶ Se video</span>
+          <span className="traffic-video-label">{t('visual.video')}</span>
         </>
       )}
       {id === 'media' && (
-        <>
-          <div className="waveform">
-            {Array.from({ length: 33 }, (_, i) => (
-              <i
-                key={i}
-                style={{ height: `${12 + ((i * 17 + i * i) % 59)}%` }}
-              />
-            ))}
-          </div>
-          <span className="search-orbit" />
-          <span className="visual-caption">AUDIO → INSIGHT</span>
-        </>
+        <img
+          src="/projects/mediasearch/mediasearch.png"
+          alt=""
+          loading="lazy"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+          }}
+        />
       )}
       {id === 'melanoma' && (
         <>
@@ -39,7 +39,7 @@ export default function ProjectVisual({ id }: Props) {
             <i />
             <i />
           </div>
-          <span className="scan-label">IMAGE CLASSIFICATION</span>
+          <span className="scan-label">{t('visual.image')}</span>
           <div className="scan-progress">
             <span />
             <span />

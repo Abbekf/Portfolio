@@ -69,6 +69,42 @@ main,
 .menu-toggle {
   display: none;
 }
+.language-switcher {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2px;
+  font-size: 11px;
+}
+.language-switcher button {
+  background: transparent;
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 8px 5px;
+  min-height: 36px;
+  white-space: nowrap;
+}
+.language-flag {
+  width: 16px;
+  height: 10px;
+  vertical-align: baseline;
+  border-radius: 1px;
+}
+.language-switcher button[aria-pressed='true'] {
+  background: #fff0e9;
+  color: #a94736;
+  font-weight: 700;
+}
+.language-switcher button:hover {
+  color: var(--coral);
+}
+.language-switcher button:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 2px;
+}
+.language-divider {
+  color: var(--line);
+}
 .skip-link {
   position: fixed;
   top: -80px;
@@ -1096,6 +1132,7 @@ main,
   .navbar {
     height: 80px;
     position: relative;
+    gap: 8px;
   }
   .logo {
     font-size: 22px;
@@ -1124,6 +1161,13 @@ main,
     margin-left: auto;
     font-size: 12px;
     padding: 8px;
+  }
+  .language-switcher {
+    font-size: 10px;
+    gap: 0;
+  }
+  .language-switcher button {
+    padding-inline: 4px;
   }
   .github-button {
     padding: 8px 12px;

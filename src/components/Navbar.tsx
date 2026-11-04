@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation()
   const [open, setOpen] = useState(false)
   return (
     <header className="navbar">
-      <a href="#start" className="logo" aria-label="AKF, till startsidan">
+      <a href="#start" className="logo" aria-label={t('nav.home')}>
         <span className="logo-dot" />
         AKF<span className="logo-slash">/</span>
       </a>
@@ -14,24 +16,54 @@ export default function Navbar() {
         aria-controls="main-nav"
         onClick={() => setOpen(!open)}
       >
-        {open ? 'Stäng ✕' : 'Meny ☰'}
+        {t(open ? 'nav.close' : 'nav.open')}
       </button>
       <nav
         id="main-nav"
         className={`nav-links ${open ? 'is-open' : ''}`}
-        aria-label="Huvudnavigation"
+        aria-label={t('nav.main')}
       >
         {[
-          ['projects', 'Projekt'],
-          ['about', 'Om mig'],
-          ['skills', 'Kompetenser'],
-          ['contact', 'Kontakt'],
+          ['projects', 'nav.projects'],
+          ['about', 'nav.about'],
+          ['skills', 'nav.skills'],
+          ['contact', 'nav.contact'],
         ].map(([id, text]) => (
           <a key={id} href={`#${id}`} onClick={() => setOpen(false)}>
-            {text}
+            {t(text)}
           </a>
         ))}
       </nav>
+      <div className="language-switcher" role="group" aria-label={t('language.label')}>
+        <button
+          type="button"
+          lang="sv"
+          aria-label={t('language.sv')}
+          aria-pressed={i18n.resolvedLanguage === 'sv'}
+          onClick={() => void i18n.changeLanguage('sv')}
+        >
+          <svg className="language-flag" viewBox="0 0 16 10" aria-hidden="true" focusable="false">
+            <path fill="#006aa7" d="M0 0h16v10H0z" />
+            <path fill="#fecc00" d="M5 0h2v10H5zM0 4h16v2H0z" />
+          </svg> SV
+        </button>
+        <span className="language-divider" aria-hidden="true">|</span>
+        <button
+          type="button"
+          lang="en"
+          aria-label={t('language.en')}
+          aria-pressed={i18n.resolvedLanguage === 'en'}
+          onClick={() => void i18n.changeLanguage('en')}
+        >
+          <svg className="language-flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false">
+            <path fill="#012169" d="M0 0h60v30H0z" />
+            <path stroke="#fff" strokeWidth="6" d="m0 0 60 30m0-30L0 30" />
+            <path stroke="#c8102e" strokeWidth="2" d="m0 0 60 30m0-30L0 30" />
+            <path stroke="#fff" strokeWidth="10" d="M30 0v30M0 15h60" />
+            <path stroke="#c8102e" strokeWidth="6" d="M30 0v30M0 15h60" />
+          </svg> EN
+        </button>
+      </div>
       <a
         href="https://github.com/Abbekf"
         className="github-button"

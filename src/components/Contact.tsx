@@ -1,4 +1,6 @@
+import { useTranslation } from 'react-i18next'
 export default function Contact() {
+  const { t } = useTranslation()
   return (
     <section
       id="contact"
@@ -6,23 +8,22 @@ export default function Contact() {
       aria-labelledby="contact-title"
     >
       <div>
-        <span className="eyebrow">04 / NÄSTA KAPITEL</span>
+        <span className="eyebrow">{t('contact.eyebrow')}</span>
         <h2 id="contact-title">
-          Ska vi bygga
+          {t('contact.title')}
           <br />
-          något tillsammans?
+          {t('contact.together')}
         </h2>
         <p>
-          Jag söker min första roll efter utbildningen inom
-          <br className="desktop-break" /> utveckling eller AI/ML i Stockholm.
-          Hör gärna av dig!
+          {t('contact.opportunity')}
+          <br className="desktop-break" /> {t('contact.detail')}
         </p>
       </div>
       <div className="contact-links">
         <a href="mailto:albin.kforsberg@gmail.com">
           <span className="contact-icon">✉</span>
           <div>
-            <small>SKRIV ETT MEJL</small>
+            <small>{t('contact.email')}</small>
             <strong>albin.kforsberg@gmail.com</strong>
           </div>
           <span aria-hidden="true">↗</span>
@@ -34,7 +35,7 @@ export default function Contact() {
         >
           <span className="contact-icon">⌘</span>
           <div>
-            <small>UTFORSKA MIN KOD</small>
+            <small>{t('contact.code')}</small>
             <strong>github.com/Abbekf</strong>
           </div>
           <span aria-hidden="true">↗</span>

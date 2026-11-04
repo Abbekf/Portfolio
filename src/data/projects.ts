@@ -1,7 +1,7 @@
 export type Project = {
   id: string
   title: string
-  category: 'Eget projekt' | 'LIA-projekt'
+  category: 'personal' | 'internship'
   label: string
   description: string
   technologies: string[]
@@ -18,97 +18,97 @@ export const projects: Project[] = [
   {
     id: 'trafficvision',
     title: 'TrafficVision',
-    category: 'Eget projekt',
-    label: 'Objektdetektering & tracking',
+    category: 'personal',
+    label: 'projectContent.trafficvision.label',
     description:
-      'Analysera trafikvideo med AI, följ fordon över tid och räkna passager över en valbar linje.',
+      'projectContent.trafficvision.description',
     technologies: ['Python', 'YOLO11', 'ByteTrack', 'Streamlit'],
     videoUrl: '/projects/trafficvision/demo.mp4',
     posterUrl: '/projects/trafficvision/preview.jpg',
     githubUrl: 'https://github.com/Abbekf/TrafficVision',
     problem:
-      'Hur kan man gå från en trafikvideo till en överblick över vilka fordon som passerar, i vilken riktning och vid vilken tidpunkt?',
+      'projectContent.trafficvision.problem',
     approach:
-      'Jag byggde en Python-app där en förtränad YOLO11n-modell upptäcker objekt och ByteTrack kopplar ihop dem mellan bildrutorna. En separat räknare registrerar spårens första passage över en horisontell eller vertikal linje. Appen har en inbyggd exempelvideo, stöd för egna uppladdningar och export till markerad video, CSV och JSON.',
+      'projectContent.trafficvision.approach',
     takeaway:
-      'Videon visar en riktig modellkörning på 10 sekunder motorvägstrafik, med 15 registrerade passager. Projektet har 23 automatiserade tester för bland annat räknelogik, export och appflöde. Passagerna är modellens förutsägelser; träffsäkerheten är ännu inte uppmätt mot manuellt märkta trafikklipp.',
+      'projectContent.trafficvision.takeaway',
   },
   {
     id: 'media',
     title: 'MediaSearch AI',
-    category: 'Eget projekt',
-    label: 'Tal → text → sökning',
+    category: 'personal',
+    label: 'projectContent.media.label',
     description:
-      'Hitta rätt ögonblick i ljud och video genom att söka efter betydelse, inte bara exakta ord.',
+      'projectContent.media.description',
     technologies: ['Python', 'Whisper', 'Streamlit'],
     githubUrl: 'https://github.com/Abbekf/MediaSearch-ai',
     problem:
-      'Långa inspelningar är svåra att söka i. En vanlig textsökning missar ofta det du letar efter när formuleringen skiljer sig från din fråga.',
+      'projectContent.media.problem',
     approach:
-      'Jag byggde ett flöde från transkription till semantisk sökning och ett Streamlit-gränssnitt. Texten representeras som embeddings så att frågor kan matchas med innehåll som har liknande betydelse.',
+      'projectContent.media.approach',
     takeaway:
-      'Projektet knyter ihop taligenkänning, textrepresentation och ett användargränssnitt. Ett exempeltranskript och tester finns i repot.',
+      'projectContent.media.takeaway',
   },
   {
     id: 'melanoma',
     title: 'Melanoma Classifier',
-    category: 'Eget projekt',
-    label: 'Computer vision',
+    category: 'personal',
+    label: 'projectContent.melanoma.label',
     description:
-      'Klassificering av hudförändringar med transfer learning och fokus på noggrann utvärdering.',
+      'projectContent.melanoma.description',
     technologies: ['TensorFlow', 'EfficientNetB0', 'Grad-CAM'],
     githubUrl: 'https://github.com/Abbekf/Melanoma-classifier',
     problem:
-      'Jag ville undersöka hur en förtränad bildmodell kan användas på hudbilder, och hur man utvärderar den utan att läcka information mellan datamängder.',
+      'projectContent.melanoma.problem',
     approach:
-      'Jag finjusterade EfficientNetB0 på ISIC2020 med patientbaserad uppdelning. Modellval gjordes på valideringsdata och följdes av en låst testutvärdering. Grad-CAM användes för att undersöka modellens fokus på valideringsbilder.',
+      'projectContent.melanoma.approach',
     takeaway:
-      'Den valda modellen nådde ROC-AUC 0,878 på valideringsdata. Repot innehåller sparade testresultat, figurer och reproducerbarhetskontroller. Detta är ett utbildningsprojekt, inte ett kliniskt verktyg.',
+      'projectContent.melanoma.takeaway',
   },
   {
     id: 'cardiac',
     title: 'Cardiac Inpainting',
     githubUrl: 'https://github.com/Abbekf/cardiac-inpainting',
-    category: 'LIA-projekt',
-    label: 'Nightingale Heart',
+    category: 'internship',
+    label: 'projectContent.cardiac.label',
     description:
-      'Kontrafaktiska bröströntgenbilder med segmentering och generativ AI.',
+      'projectContent.cardiac.description',
     technologies: ['U-Net', 'Stable Diffusion', 'Python'],
     problem:
-      'Hur kan man förändra hjärtregionen i en röntgenbild och samtidigt bevara bildens övriga innehåll?',
+      'projectContent.cardiac.problem',
     approach:
-      'Under min LIA på Nightingale Heart arbetade jag med en pipeline för NIH-bilder. Segmentering av hjärta och lungor följdes av inpainting och generering av kontrafaktiska hjärtregioner. SSIM användes för att kontrollera att omgivande bildinnehåll bevarades.',
+      'projectContent.cardiac.approach',
     takeaway:
-  'Jag fick praktisk erfarenhet av medicinsk bildbehandling, segmenteringsmasker och generativa modeller. Projektet genomfördes under min LIA på Nightingale Heart. Originalbild från NIH Clinical Center, NIH Chest X-ray Dataset. Källa: Wang m.fl., ChestX-ray8, CVPR 2017.',
+  'projectContent.cardiac.takeaway',
   },
   {
     id: 'agents',
     title: 'Konkurrentanalys med AI',
-    category: 'LIA-projekt',
-    label: 'DeLorean',
+    category: 'internship',
+    label: 'projectContent.agents.label',
     description:
-      'Från webbdata till återkommande konkurrentbevakning med LLM-baserad analys.',
+      'projectContent.agents.description',
     technologies: ['Python', 'LLM', 'AI-agenter'],
     problem:
-      'Att manuellt följa konkurrenters webbplatser tar tid och gör det lätt att missa förändringar.',
+      'projectContent.agents.problem',
     approach:
-      'Under min LIA på DeLorean arbetade jag med webbinsamling och LLM-analys. Flödet delades upp i upptäckt av webbplatser, klassificering av sidor och återkommande skanning, med lagring och veckosammanställningar via e-post.',
+      'projectContent.agents.approach',
     takeaway:
-      'Jag arbetade med hela kedjan från ostrukturerad webbdata till användbar sammanställning. Projektet gav erfarenhet av agentflöden och automatisering i ett verkligt sammanhang.',
+      'projectContent.agents.takeaway',
   },
   {
     id: 'accessibility',
     title: 'Accessibility Audit',
-    category: 'LIA-projekt',
-    label: 'DeLorean',
+    category: 'internship',
+    label: 'projectContent.accessibility.label',
     description:
-      'Automatiserad tillgänglighetsgranskning med regelkontroller och AI-stödda förklaringar.',
+      'projectContent.accessibility.description',
     technologies: ['Python', 'axe-core', 'RAG'],
     problem:
-      'Tillgänglighetsfel behöver både hittas och förklaras så att utvecklare kan förstå vad de ska åtgärda.',
+      'projectContent.accessibility.problem',
     approach:
-      'Under min LIA på DeLorean arbetade jag med ett flöde för crawling, regelbaserad granskning och rapportering, tillsammans med RAG-liknande förklaringar kopplade till WCAG.',
+      'projectContent.accessibility.approach',
     takeaway:
-      'Projektet kombinerar deterministiska kontroller med språkmodellers förmåga att förklara. Automatisk granskning täcker delar av tillgänglighetsarbetet och behöver kompletteras med manuella tester.',
+      'projectContent.accessibility.takeaway',
   },
 ]

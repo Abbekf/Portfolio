@@ -1,0 +1,192 @@
+{
+  "skip": "Skip to content",
+  "footer": {
+    "built": "Built with React, TypeScript & curiosity.",
+    "top": "Back to top ↑"
+  },
+  "hero": {
+    "badge": "Python · AI/ML · Software development",
+    "title": "Junior Software & AI Developer",
+    "role": "Software development & AI/ML",
+    "description": "Recently graduated AI developer with hands-on projects in machine learning, AI and software development. I’m looking for a team where I can contribute, keep learning and build useful solutions.",
+    "projects": "Explore my projects",
+    "contact": "Say hello",
+    "software": "SOFTWARE DEVELOPMENT",
+    "photo": "Albin Kalatzis Forsberg outdoors in Stockholm",
+    "note": "From idea to working code.",
+    "noteDetail": "One project at a time."
+  },
+  "about": {
+    "photo": "Albin sitting in a TV studio",
+    "caption": "Developer. Problem solver. Curious.",
+    "eyebrow": "02 / THE PERSON BEHIND THE CODE",
+    "title": "A hands-on problem solver.",
+    "direction": "New direction.",
+    "drive": "Same drive.",
+    "background": "After more than six years as an electrician and security technician, I traded my toolbox for code. I’m used to troubleshooting, understanding how things fit together and making solutions work in practice.",
+    "education": "In 2026, I graduated from the AI developer programme at Jensen YH in Stockholm. During my work placements at Nightingale Heart and DeLorean, I worked with medical imaging, AI analysis and automated workflows.",
+    "opportunity": "I’m now looking for a junior role in software development or AI/ML. I bring curiosity, patience and a willingness to keep learning alongside a team.",
+    "contact": "Let’s talk ↗",
+    "curious": "Curious about technology",
+    "curiousDetail": "I want to understand what goes on behind the results.",
+    "problems": "Enjoy solving problems",
+    "problemsDetail": "From a faulty connection to a pipeline that needs troubleshooting.",
+    "growth": "Ready to grow",
+    "growthDetail": "I want to contribute, get feedback and learn from experienced colleagues."
+  },
+  "contact": {
+    "eyebrow": "04 / THE NEXT CHAPTER",
+    "title": "Shall we build",
+    "together": "something together?",
+    "opportunity": "I’m looking for a junior role in",
+    "detail": "software development or AI/ML in Stockholm. Get in touch!",
+    "email": "SEND AN EMAIL",
+    "code": "EXPLORE MY CODE"
+  },
+  "projects": {
+    "eyebrow": "01 / FROM IDEA TO CODE",
+    "title": "Selected projects",
+    "intro": "Personal experiments and real-world",
+    "introDetail": "challenges from my work placements.",
+    "filter": "Filter projects",
+    "close": "Close project details",
+    "videoLabel": "TrafficVision: prerecorded AI traffic analysis",
+    "videoUnsupported": "Your browser does not support video playback.",
+    "videoCaption": "Prerecorded model analysis · 12 seconds. Source:",
+    "problem": "The challenge",
+    "approach": "My approach",
+    "takeaway": "Results & lessons learned",
+    "download": "Download the project ↓",
+    "runNote": "Watch the video here. To analyse the sample video or your own clip, run the Python app locally using the instructions in the ZIP file.",
+    "github": "Explore the code on GitHub ↗",
+    "read": "Read about the project",
+    "watch": "View video & project",
+    "githubLabel": "{{title}} on GitHub"
+  },
+  "projectContent": {
+    "trafficvision": {
+      "label": "Object detection & tracking",
+      "description": "Analyse traffic video with AI, track vehicles over time and count crossings over a configurable line.",
+      "problem": "How can a traffic video provide an overview of which vehicles pass, in which direction and at what time?",
+      "approach": "I built a Python app where a pretrained YOLO11n model detects objects and ByteTrack links them across frames. A separate counter records each track’s first crossing of a horizontal or vertical line. The app includes a sample video, supports custom uploads and exports annotated video, CSV and JSON.",
+      "takeaway": "The video shows an actual model run on 10 seconds of motorway traffic, with 15 recorded crossings. The project has 23 automated tests covering counting logic, exports and the app workflow, among other things. The crossings are model predictions; accuracy has not yet been measured against manually annotated traffic clips."
+    },
+    "media": {
+      "label": "Speech → text → search",
+      "description": "Find the right moment in audio and video by searching for meaning, beyond exact words.",
+      "problem": "Long recordings are difficult to search. A standard text search often misses what you need when the wording differs from your query.",
+      "approach": "I built a workflow from transcription to semantic search, with a Streamlit interface. Text is represented as embeddings so that queries can be matched with content that has a similar meaning.",
+      "takeaway": "The project connects speech recognition, text representation and a user interface. The repository includes a sample transcript and tests."
+    },
+    "melanoma": {
+      "label": "Computer vision",
+      "description": "Skin lesion classification using transfer learning, with a focus on careful evaluation.",
+      "problem": "I wanted to explore how a pretrained image model could be applied to skin images, and how to evaluate it without leaking information between datasets.",
+      "approach": "I fine-tuned EfficientNetB0 on ISIC2020 using patient-level data splits. Model selection used validation data, followed by a locked test evaluation. Grad-CAM was used to examine the model’s focus on validation images.",
+      "takeaway": "The selected model achieved a validation ROC-AUC of 0.878. The repository includes saved test results, figures and reproducibility checks. This is an educational project, not a clinical tool."
+    },
+    "cardiac": {
+      "label": "Nightingale Heart",
+      "description": "Counterfactual chest X-rays using segmentation and generative AI.",
+      "problem": "How can the heart region in an X-ray be modified while preserving the rest of the image?",
+      "approach": "During my work placement at Nightingale Heart, I worked on a pipeline for NIH images. Heart and lung segmentation was followed by inpainting and generation of counterfactual heart regions. SSIM was used to check that the surrounding image content was preserved.",
+      "takeaway": "I gained hands-on experience with medical imaging, segmentation masks and generative models. The project was carried out during my work placement at Nightingale Heart. Original image from the NIH Clinical Center, NIH Chest X-ray Dataset. Source: Wang et al., ChestX-ray8, CVPR 2017."
+    },
+    "agents": {
+      "label": "DeLorean",
+      "description": "From web data to recurring competitor monitoring with LLM-based analysis.",
+      "problem": "Manually monitoring competitors’ websites takes time and makes it easy to miss changes.",
+      "approach": "During my work placement at DeLorean, I worked with web data collection and LLM analysis. The workflow was divided into website discovery, page classification and recurring scans, with storage and weekly email summaries.",
+      "takeaway": "I worked across the full workflow, from unstructured web data to useful summaries. The project gave me experience with agent workflows and automation in a real-world setting."
+    },
+    "accessibility": {
+      "label": "DeLorean",
+      "description": "Automated accessibility auditing with rule checks and AI-assisted explanations.",
+      "problem": "Accessibility issues need to be both identified and explained so developers can understand what to fix.",
+      "approach": "During my work placement at DeLorean, I worked on a workflow for crawling, rule-based auditing and reporting, together with RAG-style explanations linked to WCAG.",
+      "takeaway": "The project combines deterministic checks with language models’ ability to explain. Automated auditing covers part of accessibility work and needs to be complemented by manual testing."
+    }
+  },
+  "categories": {
+    "all": "All",
+    "personal": "Personal projects",
+    "internship": "Work placement projects"
+  },
+  "category": {
+    "personal": "Personal project",
+    "internship": "Work placement project"
+  },
+  "visual": {
+    "video": "▶ Watch video",
+    "audio": "AUDIO → INSIGHT",
+    "image": "IMAGE CLASSIFICATION"
+  },
+  "nav": {
+    "home": "AKF, back to home",
+    "main": "Main navigation",
+    "projects": "Projects",
+    "about": "About me",
+    "skills": "Skills",
+    "contact": "Contact",
+    "open": "Menu ☰",
+    "close": "Close ✕"
+  },
+  "language": {
+    "label": "Choose language",
+    "sv": "Switch to Swedish",
+    "en": "Switch to English"
+  },
+  "skills": {
+    "eyebrow": "03 / MY TOOLBOX",
+    "title": "Skills & technologies",
+    "intro": "Tools I have worked with.",
+    "introDetail": "Select a card for context."
+  },
+  "meta": {
+    "title": "Albin Kalatzis Forsberg | Junior Software & AI Developer",
+    "description": "Albin Kalatzis Forsberg, Junior Software & AI Developer in Stockholm. Explore projects in machine learning, generative AI and software development.",
+    "socialDescription": "Hands-on problem solver with projects in AI, machine learning and software development. Seeking a junior role in development or AI/ML."
+  },
+  "skillContent": {
+    "0": {
+      "area": "Code & data",
+      "detail": "Data processing, AI pipelines, web data collection and automation in personal projects and work placements."
+    },
+    "1": {
+      "area": "Databases",
+      "detail": "Relational databases, queries and CRUD, including a personal inventory management project using SQLite."
+    },
+    "2": {
+      "area": "Deep learning",
+      "detail": "Training and fine-tuning image classification models with Keras and EfficientNetB0."
+    },
+    "3": {
+      "area": "Image models",
+      "detail": "Used in work with image models and medical imaging."
+    },
+    "4": {
+      "area": "Machine learning",
+      "detail": "Model evaluation and classification metrics such as ROC-AUC, precision and recall."
+    },
+    "5": {
+      "area": "Generative AI",
+      "detail": "LLM-based analysis, agent workflows and RAG-style explanations during my work placement at DeLorean."
+    },
+    "6": {
+      "area": "Data apps",
+      "detail": "Interactive Python interfaces for exploring data and using AI features, including MediaSearch AI."
+    },
+    "7": {
+      "area": "Frontend",
+      "detail": "This portfolio is built with React and TypeScript. I develop my skills by building things."
+    },
+    "8": {
+      "area": "Version control",
+      "detail": "Version control for personal projects with Git and GitHub, including commit, push and working with .gitignore."
+    },
+    "9": {
+      "area": "Containers",
+      "detail": "Basic work with containers and Docker Compose. Among other things, I have set up a local Spark cluster."
+    }
+  }
+}

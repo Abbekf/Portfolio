@@ -1,85 +1,87 @@
+import { useTranslation } from 'react-i18next'
 const skills = [
   {
     name: 'Python',
     mark: 'Py',
     color: '#3379ab',
-    area: 'Kod & data',
+    area: 'skillContent.0.area',
     detail:
-      'Databearbetning, AI-pipelines, webbinsamling och automatisering i egna projekt och under LIA.',
+      'skillContent.0.detail',
   },
   {
     name: 'SQL',
     mark: 'SQL',
     color: '#555c83',
-    area: 'Databaser',
+    area: 'skillContent.1.area',
     detail:
-      'Relationsdatabaser, frågor och CRUD. Bland annat i ett eget lagerhanteringsprojekt med SQLite.',
+      'skillContent.1.detail',
   },
   {
     name: 'TensorFlow',
     mark: 'TF',
     color: '#ee8029',
-    area: 'Deep learning',
+    area: 'skillContent.2.area',
     detail:
-      'Träning och finjustering av bildklassificeringsmodeller med Keras och EfficientNetB0.',
+      'skillContent.2.detail',
   },
   {
     name: 'PyTorch',
     mark: 'Pt',
     color: '#dc5b47',
-    area: 'Bildmodeller',
-    detail: 'Använt i arbete med bildmodeller och medicinsk bildbehandling.',
+    area: 'skillContent.3.area',
+    detail: 'skillContent.3.detail',
   },
   {
     name: 'scikit-learn',
     mark: 'sk',
     color: '#2b8c9d',
-    area: 'Maskininlärning',
+    area: 'skillContent.4.area',
     detail:
-      'Modellutvärdering och klassificeringsmått som ROC-AUC, precision och recall.',
+      'skillContent.4.detail',
   },
   {
     name: 'LLM & RAG',
     mark: '✧',
     color: '#ad62a2',
-    area: 'Generativ AI',
+    area: 'skillContent.5.area',
     detail:
-      'LLM-baserad analys, agentflöden och RAG-liknande förklaringar under LIA på DeLorean.',
+      'skillContent.5.detail',
   },
   {
     name: 'Streamlit',
     mark: 'St',
     color: '#e85264',
-    area: 'Dataappar',
+    area: 'skillContent.6.area',
     detail:
-      'Interaktiva Python-gränssnitt för att utforska data och använda AI-funktioner, bland annat MediaSearch AI.',
+      'skillContent.6.detail',
   },
   {
     name: 'React',
     mark: '⚛',
     color: '#2298ae',
-    area: 'Frontend',
+    area: 'skillContent.7.area',
     detail:
-      'Den här portfolion är byggd med React och TypeScript. Jag utvecklar mina kunskaper genom att bygga.',
+      'skillContent.7.detail',
   },
   {
     name: 'Git',
     mark: '◇',
     color: '#ea634c',
-    area: 'Versionshantering',
+    area: 'skillContent.8.area',
     detail:
-      'Versionshantering av egna projekt med Git och GitHub, inklusive commit, push och arbete med .gitignore.',
+      'skillContent.8.detail',
   },
   {
     name: 'Docker',
     mark: '▤',
     color: '#2788c7',
-    area: 'Containrar',
+    area: 'skillContent.9.area',
     detail:
-      'Grundläggande arbete med containrar och Docker Compose. Jag har bland annat satt upp ett lokalt Spark-kluster.',
+      'skillContent.9.detail',
   },
 ]
 export default function Skills() {
+  const { t } = useTranslation()
   return (
     <section
       id="skills"
@@ -88,15 +90,15 @@ export default function Skills() {
     >
       <div className="section-heading">
         <div>
-          <span className="eyebrow">03 / MIN VERKTYGSLÅDA</span>
+          <span className="eyebrow">{t('skills.eyebrow')}</span>
           <h2 id="skills-title">
-            Kompetenser & teknik<span className="accent">.</span>
+            {t('skills.title')}<span className="accent">.</span>
           </h2>
         </div>
         <p>
-          Verktyg jag har arbetat med.
+          {t('skills.intro')}{' '}
           <br />
-          Tryck på ett kort för sammanhang.
+          {t('skills.introDetail')}
         </p>
       </div>
       <div className="skills-grid">
@@ -107,12 +109,12 @@ export default function Skills() {
                 {s.mark}
               </span>
               <strong>{s.name}</strong>
-              <small>{s.area}</small>
+              <small>{t(s.area)}</small>
               <span className="skill-expand" aria-hidden="true">
                 +
               </span>
             </summary>
-            <p>{s.detail}</p>
+            <p>{t(s.detail)}</p>
           </details>
         ))}
       </div>

@@ -1,57 +1,52 @@
+import { useTranslation } from 'react-i18next'
 import photo from '../assets/albin-about.jpg'
 export default function About() {
+  const { t } = useTranslation()
   return (
     <section id="about" className="about section" aria-labelledby="about-title">
       <div className="about-photo">
-        <img src={photo} alt="Albin sittande i en tv-studio" loading="lazy" />
+        <img src={photo} alt={t('about.photo')} loading="lazy" />
         <span>
           Albin Kalatzis Forsberg
           <br />
-          <small>Utvecklare. Problemlösare. Nyfiken.</small>
+          <small>{t('about.caption')}</small>
         </span>
       </div>
       <div className="about-copy">
-        <span className="eyebrow">02 / MÄNNISKAN BAKOM KODEN</span>
+        <span className="eyebrow">{t('about.eyebrow')}</span>
         <h2 id="about-title">
-          Praktisk problemlösare.
+          {t('about.title')}
           <br />
-          <span className="gradient-text">Ny riktning.</span> Samma driv.
+          <span className="gradient-text">{t('about.direction')}</span> {t('about.drive')}
         </h2>
         <p>
-          Efter över sex år som elektriker och säkerhetstekniker bytte jag
-          verktygslådan mot kod. Jag är van vid att felsöka, förstå hur saker
-          hänger ihop och få lösningar att fungera i praktiken.
+          {t('about.background')}
         </p>
         <p>
-          2026 tog jag examen från AI-utvecklarutbildningen på Jensen YH i
-          Stockholm. Under mina LIA-perioder på Nightingale Heart och DeLorean
-          arbetade jag med medicinsk bildbehandling, AI-analys och
-          automatiserade flöden.
+          {t('about.education')}
         </p>
         <p>
-          Nu söker jag min första roll efter utbildningen inom utveckling eller
-          AI/ML. Jag tar med mig nyfikenhet, tålamod och viljan att fortsätta
-          lära mig tillsammans med ett team.
+          {t('about.opportunity')}
         </p>
         <a className="text-link" href="#contact">
-          Låt oss prata ↗
+          {t('about.contact')}
         </a>
       </div>
       <div className="about-values">
         <div>
           <span>✳</span>
-          <h3>Nyfiken på tekniken</h3>
-          <p>Jag vill förstå vad som händer bakom resultatet.</p>
+          <h3>{t('about.curious')}</h3>
+          <p>{t('about.curiousDetail')}</p>
         </div>
         <div>
           <span>⌘</span>
-          <h3>Gillar att lösa problem</h3>
-          <p>Från en trasig koppling till en pipeline som behöver felsökas.</p>
+          <h3>{t('about.problems')}</h3>
+          <p>{t('about.problemsDetail')}</p>
         </div>
         <div>
           <span>↗</span>
-          <h3>Redo att utvecklas</h3>
-          <p>Jag vill bidra, få feedback och lära mig av erfarna kollegor.</p>
+          <h3>{t('about.growth')}</h3>
+          <p>{t('about.growthDetail')}</p>
         </div>
       </div>
     </section>
