@@ -4,7 +4,6 @@
   --solid-ink: #fff;
   --badge: #fff0e9;
   --badge-ink: #a94736;
-  --badge-line: #fce2d5;
   --secondary-line: #e5d8c8;
   --subtle: #766f72;
   --hero-glow: linear-gradient(140deg, #fff4e9, #ffe5df 60%, #fce9f3);
@@ -56,7 +55,6 @@
   --solid-ink: #211b2b;
   --badge: #352734;
   --badge-ink: #ffc1ac;
-  --badge-line: #654354;
   --secondary-line: #575064;
   --subtle: #bcb4c5;
   --hero-glow: linear-gradient(140deg, #302333, #5b2e43 60%, #3c2540);
@@ -270,32 +268,11 @@ main,
   padding: 55px 0 85px;
   position: relative;
 }
-.hero-badge {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  padding: 7px 12px;
-  background: var(--badge);
-  color: var(--badge-ink);
-  border: 1px solid var(--badge-line);
-  border-radius: 30px;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.035em;
-}
-.status-dot {
-  width: 6px;
-  height: 6px;
-  background: #ed8861;
-  border-radius: 50%;
-  box-shadow: 0 0 0 3px #fce0d0;
-}
 .hero h1 {
   font-size: clamp(40px, 4.3vw, 58px);
   line-height: 1.13;
   font-weight: 800;
   letter-spacing: -2.6px;
-  margin-top: 23px;
 }
 .gradient-text {
   background: var(--gradient);
@@ -1123,9 +1100,6 @@ main,
   .hero h1 {
     font-size: 48px;
   }
-  .hero-badge {
-    font-size: 9px;
-  }
   .portrait-frame {
     max-width: 300px;
     height: 390px;
@@ -1258,9 +1232,6 @@ main,
   .hero-description {
     font-size: 14px;
     max-width: 540px;
-  }
-  .hero-badge {
-    font-size: 9px;
   }
   .hero-visual {
     max-width: 440px;
@@ -1441,9 +1412,6 @@ main,
   main,
   .footer {
     padding-inline: 16px;
-  }
-  .hero-badge {
-    font-size: 8px;
   }
   .hero h1 {
     font-size: 37px;

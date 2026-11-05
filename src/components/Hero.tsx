@@ -6,10 +6,6 @@ export default function Hero() {
   return (
     <section id="start" className="hero" aria-labelledby="hero-title">
       <div className="hero-content">
-        <span className="hero-badge">
-          <span className="status-dot" />
-          {t('hero.badge')}
-        </span>
         <h1 id="hero-title">
           Albin Kalatzis
           <br />
