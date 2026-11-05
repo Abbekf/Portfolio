@@ -10,7 +10,6 @@
   --hero-glow: linear-gradient(140deg, #fff4e9, #ffe5df 60%, #fce9f3);
   --hero-ring: #f8c6ae;
   --portrait-line: #fff9f2;
-  --note: #fffdf9;
   --eyebrow: #9a7364;
   --project-label: #967c72;
   --tag: #f4f3f7;
@@ -63,7 +62,6 @@
   --hero-glow: linear-gradient(140deg, #302333, #5b2e43 60%, #3c2540);
   --hero-ring: #80546b;
   --portrait-line: #f3e5de;
-  --note: #fffdf9;
   --eyebrow: #ffad93;
   --project-label: #c6bac8;
   --tag: #2e2b3c;
@@ -126,12 +124,6 @@
 }
 :root[data-theme='dark'] .project-card:hover {
   box-shadow: 0 12px 24px #08071155;
-}
-:root[data-theme='dark'] .location-note {
-  color: #202135;
-}
-:root[data-theme='dark'] .location-note small {
-  color: #666778;
 }
 .header-preferences {
   display: flex;
@@ -410,68 +402,6 @@ main,
   object-fit: cover;
   object-position: center 55%;
   transform: rotate(-3deg) scale(1.07);
-}
-.floating-note {
-  position: absolute;
-  z-index: 2;
-  border: 1px solid #fff9;
-  box-shadow: 0 10px 30px #4a354d14;
-  border-radius: 12px;
-}
-.code-note {
-  left: -28px;
-  top: 40px;
-  background: #24243b;
-  color: #e7dce6;
-  padding: 12px 17px;
-  transform: rotate(-7deg);
-  font-size: 10px;
-  line-height: 1.9;
-}
-.window-dots {
-  font-size: 7px;
-  color: #f59b82;
-  letter-spacing: 2px;
-  display: block;
-  margin-bottom: 8px;
-}
-.code-note code em {
-  color: #c7a3f2;
-  font-style: normal;
-}
-.code-note code b {
-  color: #f5bb95;
-  font-weight: 400;
-}
-.location-note {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  bottom: 0;
-  right: -14px;
-  background: var(--note);
-  padding: 14px 20px;
-  transform: rotate(3deg);
-}
-.note-icon {
-  font-size: 30px;
-  color: #ef896a;
-}
-.location-note strong {
-  font-size: 10px;
-  display: block;
-}
-.location-note small {
-  font-size: 9px;
-  color: var(--muted);
-}
-.visual-spark {
-  position: absolute;
-  right: -28px;
-  top: 5px;
-  color: #ee9672;
-  font-size: 60px;
-  transform: rotate(15deg);
 }
 .section {
   scroll-margin-top: 30px;
@@ -1192,15 +1122,9 @@ main,
   .hero-badge {
     font-size: 9px;
   }
-  .code-note {
-    left: -10px;
-  }
   .portrait-frame {
     max-width: 300px;
     height: 390px;
-  }
-  .location-note {
-    right: -8px;
   }
   .project-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1348,20 +1272,6 @@ main,
   }
   .hero-visual::after {
     inset: 10px -5px 0;
-  }
-  .code-note {
-    left: -12px;
-    top: 27px;
-    font-size: 9px;
-  }
-  .location-note {
-    right: -15px;
-    padding: 12px 15px;
-  }
-  .visual-spark {
-    right: 0;
-    font-size: 48px;
-    top: -10px;
   }
   .hero-footnote {
     margin-top: 22px;
@@ -1535,9 +1445,6 @@ main,
   }
   .hero-visual {
     width: 92%;
-  }
-  .code-note {
-    left: -5px;
   }
   .section-heading {
     align-items: start;

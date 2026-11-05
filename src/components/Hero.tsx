@@ -49,27 +49,6 @@ export default function Hero() {
             fetchPriority="high"
           />
         </div>
-        <div className="floating-note code-note" aria-hidden="true">
-          <span className="window-dots">● ● ●</span>
-          <code>
-            <em>const</em> developer = {'{'}
-            <br />
-            &nbsp; name: <b>'Albin'</b>,<br />
-            &nbsp; mindset: <b>'keep learning'</b>
-            <br />
-            {'}'}
-          </code>
-        </div>
-        <div className="floating-note location-note">
-          <span className="note-icon">✳</span>
-          <div>
-            <strong>{t('hero.note')}</strong>
-            <small>{t('hero.noteDetail')}</small>
-          </div>
-        </div>
-        <span className="visual-spark" aria-hidden="true">
-          ✳
-        </span>
       </div>
     </section>
   )
