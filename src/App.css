@@ -512,6 +512,9 @@ main,
   align-items: stretch;
 }
 .project-card {
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
   border: 1px solid var(--line);
   border-radius: 13px;
   background: var(--surface);
@@ -525,6 +528,20 @@ main,
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px #2421350c;
+}
+.project-card:has(.project-actions button:focus-visible) {
+  outline: 3px solid var(--focus, #a1427a);
+  outline-offset: 5px;
+}
+.project-card .project-actions button::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.project-card .project-actions a {
+  position: relative;
+  z-index: 2;
 }
 .project-body {
   padding: 15px 12px 13px;

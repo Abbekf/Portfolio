@@ -12,7 +12,7 @@ function applyTheme(theme: Theme) {
 export default function ThemeToggle() {
   const { t } = useTranslation()
   const [theme, setTheme] = useState<Theme>(() =>
-    document.documentElement.dataset.theme === 'light' ? 'light' : 'dark',
+    document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light',
   )
 
   function toggleTheme() {

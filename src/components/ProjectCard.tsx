@@ -19,7 +19,12 @@ export default function ProjectCard({ project, onSelect }: Props) {
           ))}
         </div>
         <div className="project-actions">
-          <button onClick={() => onSelect(project)}>
+          <button
+            type="button"
+            onClick={() => onSelect(project)}
+            aria-label={`${t(project.videoUrl ? 'projects.watch' : 'projects.read')}: ${title}`}
+            aria-haspopup="dialog"
+          >
             {t(project.videoUrl ? 'projects.watch' : 'projects.read')}{' '}
             <span aria-hidden="true">↗</span>
           </button>
