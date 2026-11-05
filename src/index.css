@@ -2,7 +2,7 @@
 :root {
   font-family: 'DM Sans', sans-serif;
   color: var(--ink, #202135);
-  background: var(--page, #fffdfa);
+  background: var(--page, #f3eadb);
   color-scheme: light;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
