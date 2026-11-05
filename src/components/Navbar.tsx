@@ -71,7 +71,7 @@ export default function Navbar() {
         <ThemeToggle />
       </div>
       <a
-        href={`/cv/CV_Albin_${i18n.resolvedLanguage === 'sv' ? 'SV' : 'EN'}.pdf`}
+        href={`${import.meta.env.BASE_URL}cv/CV_Albin_${i18n.resolvedLanguage === 'sv' ? 'SV' : 'EN'}.pdf`}
         className="cv-button"
         download
       >
