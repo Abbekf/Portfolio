@@ -122,6 +122,7 @@
     "image": "IMAGE CLASSIFICATION"
   },
   "nav": {
+    "downloadCv": "Download CV",
     "home": "AKF, back to home",
     "main": "Main navigation",
     "projects": "Projects",

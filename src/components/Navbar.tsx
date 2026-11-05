@@ -71,12 +71,18 @@ export default function Navbar() {
         <ThemeToggle />
       </div>
       <a
-        href="https://github.com/Abbekf"
-        className="github-button"
-        target="_blank"
-        rel="noopener noreferrer"
+        href={`/cv/CV_Albin_${i18n.resolvedLanguage === 'sv' ? 'SV' : 'EN'}.pdf`}
+        className="cv-button"
+        download
       >
-        GitHub <span aria-hidden="true">↗</span>
+        {t('nav.downloadCv')}
+        <span aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none"
+            stroke="currentColor" strokeWidth="1.7" strokeLinecap="round"
+            strokeLinejoin="round" focusable="false">
+            <path d="M12 3v12m-4-4 4 4 4-4M5 16v5h14v-5" />
+          </svg>
+        </span>
       </a>
     </header>
   )

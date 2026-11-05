@@ -122,6 +122,7 @@
     "image": "BILDKLASSIFICERING"
   },
   "nav": {
+    "downloadCv": "Ladda ner CV",
     "home": "AKF, till startsidan",
     "main": "Huvudnavigation",
     "projects": "Projekt",
